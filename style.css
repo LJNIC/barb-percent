@@ -14,5 +14,11 @@ main {
 h1 {
   color: white;
   font-family: 'Press Start 2P';
+  text-align: center;
+}
+
+ol {
+  font-size: 1.5em;
+  margin: 5%;
 }
 
