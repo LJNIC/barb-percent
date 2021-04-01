@@ -1,0 +1,18 @@
+body {
+  background: #6c35c7;
+}
+
+main {
+  margin: 0 25% 0 25%;
+  background: #d77aec;
+  height: 100%;
+  border-radius: 5%;
+  padding: 15px;
+  font-family: sans;
+}
+
+h1 {
+  color: white;
+  font-family: 'Press Start 2P';
+}
+
