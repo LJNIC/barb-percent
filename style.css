@@ -8,17 +8,16 @@ main {
   height: 100%;
   border-radius: 5%;
   padding: 15px;
-  font-family: sans;
+  font-family: 'Press Start 2P';
 }
 
 h1 {
   color: white;
-  font-family: 'Press Start 2P';
   text-align: center;
 }
 
 ol {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin: 5%;
 }
 
