@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+a {
+    color: #ff7a38;
+}
+
 body, html {
     padding: 0;
     margin: 0;
@@ -13,6 +17,7 @@ body {
     background-image: url("https://cdn.betterttv.net/emote/5ff03095be65982e48cf0595/3x");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -29,6 +34,7 @@ main {
     max-width: 600px;
     width: 100%;
     box-shadow: 0 0 10px -10px white;
+    position: relative;
 }
 
 h1 {
@@ -45,7 +51,7 @@ div.list {
 
 div.list > div {
     display: flex;
-    justify-content: space-between;
+
     flex-wrap: wrap;
 }
 
@@ -55,6 +61,47 @@ div.list > div:not(:first-of-type) {
 
 div.list > div span:first-of-type {
     padding-right: 30px;
+    margin-right: auto;
+}
+
+div.list > div::before {
+    content: attr(data-i)'.';
+}
+
+div.tooltip-action {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    cursor: pointer;
+    color: white;
+    transition: color 80ms linear;
+}
+
+div.tooltip-action:hover {
+    color: #ff7a38;
+}
+
+div.tooltip-action:hover + div.tooltip-content, div.tooltip-content:hover {
+    opacity: 1;
+    pointer-events: all;
+}
+
+div.tooltip-content {
+    position: absolute;
+    left: 0;
+    border-radius: 5%;
+    top: 0;
+    color: white;
+    background: #501e9c;
+    padding: 10px 20px;
+    transition: all 100ms linear;
+    opacity: 0;
+    pointer-events: none;
+    border: 3px solid #ff7a38;
+}
+
+div.tooltip-content p {
+    line-height: 1.3em;
 }
 
 @media screen and (max-width: 550px) {
@@ -65,9 +112,10 @@ div.list > div span:first-of-type {
     div.list > div span {
         font-size: 0.8em;
     }
-    
+
     div.list > div span:first-of-type {
         padding-right: 0;
+        margin-right: 0;
         margin-bottom: 5px;
     }
 
@@ -78,5 +126,11 @@ div.list > div span:first-of-type {
     div.list > div {
         flex-direction: column;
         align-items: center;
+    }
+    
+    div.list > div::before {
+        content: attr(data-i);
+        margin-bottom: 2px;
+        font-size: 1.3em;
     }
 }
