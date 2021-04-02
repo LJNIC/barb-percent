@@ -105,6 +105,10 @@ div.tooltip-content p {
 }
 
 @media screen and (max-width: 550px) {
+    div.tooltip-content p {
+        font-size: 0.8em;
+    }
+    
     h1 {
         font-size: 1.5em;
     }
