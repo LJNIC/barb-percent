@@ -58,6 +58,14 @@ div.list > div span:first-of-type {
 }
 
 @media screen and (max-width: 550px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    div.list > div span {
+        font-size: 0.8em;
+    }
+    
     div.list > div span:first-of-type {
         padding-right: 0;
         margin-bottom: 5px;
