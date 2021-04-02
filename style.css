@@ -1,34 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
 body {
-  background: #231749;
-  background-image: url("https://cdn.betterttv.net/emote/5ff03095be65982e48cf0595/3x");
+    background: #231749;
+    background-image: url("https://cdn.betterttv.net/emote/5ff03095be65982e48cf0595/3x");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 15px;
+    backdrop-filter: blur(15px) brightness(0.5);
 }
 
 main {
-  margin: 0 25% 0 25%;
-  background: #501e9c;
-  height: 100%;
-  border-radius: 5%;
-  padding: 15px;
-  font-family: 'Press Start 2P';
+    margin-top: 3rem;
+    background: #501e9c;
+    border-radius: 6%;
+    padding: 15px 15px 30px 15px;
+    font-family: 'Press Start 2P';
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 0 10px -10px white;
 }
 
 h1 {
-  color: white;
-  text-align: center;
+    color: white;
+    text-align: center;
 }
 
-ol {
-  font-size: 1.2em;
-  margin: 5%;
-  color: #ff7a38;
+div.list {
+    font-size: 1.2em;
+    color: #ff7a38;
+    display: flex;
+    flex-direction: column;
 }
 
-li {
-  margin-bottom: 5px;
+div.list > div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-div {
-  display: flex;
-  justify-content: space-between;
+div.list > div:not(:first-of-type) {
+    margin-top: 15px;
 }
 
+div.list > div span:first-of-type {
+    padding-right: 30px;
+}
+
+@media screen and (max-width: 550px) {
+    div.list > div span:first-of-type {
+        padding-right: 0;
+        margin-bottom: 5px;
+    }
+
+    div.list {
+        align-items: center;
+    }
+
+    div.list > div {
+        flex-direction: column;
+        align-items: center;
+    }
+}
